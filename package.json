@@ -1,0 +1,44 @@
+{
+	"name": "nano",
+	"description": "Nano versions of some popular widgets.",
+	"version": "1.0",
+	"keywords": ["JavaScript", "Dojo", "Toolkit", "nano", "widgets", "accordion", "tabs", "lightbox", "tree"],
+	"maintainers": [
+		{
+			"name": "Chris Barber",
+			"email": "chris@cb1inc.com",
+			"web": "http://www.cb1inc.com/"
+		}
+	],
+	"contributors": [
+		{
+			"name": "Chris Barber",
+			"email": "chris@cb1inc.com",
+			"web": "http://www.cb1inc.com/"
+		}
+	],
+	"bugs": "https://github.com/cb1kenobi/nano",
+	"licenses": [
+		 {
+				 "type": "BSD",
+				 "url": "https://github.com/cb1kenobi/nano/blob/master/LICENSE"
+		 }
+	],
+	"repositories": [
+		{
+			"type": "git", 
+			"url": "https://github.com/cb1kenobi/nano.git",
+			"path": "packages/nano"
+		}
+	],
+	"dependencies": {
+		"dojo": "1.7"
+	},
+	"homepage": "https://github.com/cb1kenobi/nano",
+	"directories": {
+		"lib": ".",
+		"test": "./tests"
+	},
+	"main": "main",
+	"dojoBuild": "nano.profile.js"
+}

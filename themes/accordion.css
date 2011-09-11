@@ -1,0 +1,9 @@
+.nanoAccordionContainer{background-color:#efefef;border:solid 1px #b5bcc7;margin-bottom:1px;-webkit-transition-property:background-color,border;-moz-transition-property:background-color,border;transition-property:background-color,border;-webkit-transition-duration:0.3s;-moz-transition-duration:0.3s;transition-duration:0.3s;-webkit-transition-timing-function:linear;-moz-transition-timing-function:linear;transition-timing-function:linear;}
+.nanoAccordionContainer:hover{border:1px solid #769dc0;background-color:#abd6ff !important;-webkit-transition-duration:0.2s;-moz-transition-duration:0.2s;transition-duration:0.2s;}
+.nanoAccordionContainer:hover .nanoAccordionTitle{color:#000000;}
+.nanoAccordionContainer:hover .nanoAccordionWrapper{background-color:#ffffff;border:1px solid #769dc0 !important;-webkit-box-shadow:inset 0 0 3px rgba(0, 0, 0, 0.25);-moz-box-shadow:inset 0 0 3px rgba(0, 0, 0, 0.25);box-shadow:inset 0 0 3px rgba(0, 0, 0, 0.25);}
+.nanoAccordionTitle{background-color:transparent;background-image:url("../../dijit/themes/claro/layout/images/accordion.png");background-position:0 0;background-repeat:repeat-x;color:#4a4a4a;cursor:pointer;min-height:17px;padding:5px 7px 2px 7px;}
+.nanoAccordionWrapper{background-color:#ffffff;border:1px solid #769dc0;height:auto;margin:0 2px 2px;overflow:hidden;}
+.nanoAccordionInner{padding:9px;}
+.nanoAccordionContainer.nanoAccordionSelected{background-color:#cfe5fa;border-color:#769dc0 !important;}
+.nanoAccordionSelected .nanoAccordionTitle{color:#000000;cursor:default;}

@@ -1,0 +1,59 @@
+@import "../../dijit/themes/claro/variables";
+
+.nanoAccordionContainer {
+	background-color: @unselected-background-color;
+	border: solid 1px @border-color;
+	margin-bottom: 1px;
+	.transition-property(background-color,border);
+	.transition-duration(.3s);
+	.transition-timing-function(linear);
+}
+
+.nanoAccordionContainer:hover {
+	border: 1px solid @hovered-border-color;
+	background-color: @hovered-background-color !important;
+	.transition-duration(.2s);
+}
+
+.nanoAccordionContainer:hover .nanoAccordionTitle {
+	color: @hovered-text-color;
+}
+
+.nanoAccordionContainer:hover .nanoAccordionWrapper {
+	background-color:@pane-background-color;
+	border:1px solid @hovered-border-color !important;
+	.box-shadow(inset 0 0 3px rgba(0, 0, 0, .25));
+}
+
+.nanoAccordionTitle {
+	background-color: transparent;
+	background-image: url("../../dijit/themes/claro/layout/images/accordion.png");
+	background-position: 0 0;
+	background-repeat: repeat-x;
+	color: @unselected-text-color;
+	cursor: pointer;
+	min-height: 17px;
+	padding: 5px 7px 2px 7px;
+}
+
+.nanoAccordionWrapper {
+	background-color: @pane-background-color;
+	border: 1px solid @selected-border-color;
+	height: auto;
+	margin: 0 2px 2px;
+	overflow: hidden;
+}
+
+.nanoAccordionInner {
+	padding: 9px;
+}
+
+.nanoAccordionContainer.nanoAccordionSelected {
+	background-color: @selected-background-color;
+	border-color: @selected-border-color !important;
+}
+
+.nanoAccordionSelected .nanoAccordionTitle {
+	color: @selected-text-color;
+	cursor: default;
+}
