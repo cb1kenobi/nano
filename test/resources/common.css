@@ -3,7 +3,7 @@ audio,canvas,video{display:inline-block;*display:inline;*zoom:1;}
 audio:not([controls]){display:none;}
 [hidden]{display:none;}
 html{font-size:100%;overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}
-body{background-color:#364350;background-image:-moz-linear-gradient(top, #13212b, #364350);background-repeat:no-repeat;min-height:400px;margin:0;padding:20px 30px;}
+body{background-color:#364350;background-image:-moz-linear-gradient(top, #13212b, #364350);background-repeat:no-repeat;height:400px;margin:0;padding:20px 30px;}
 body,button,input,select,textarea{font-family:sans-serif;}
 a{color:#9cc1e7;}
 a:visited{color:#9cc1e7;}
