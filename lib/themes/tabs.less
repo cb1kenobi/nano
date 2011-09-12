@@ -1,0 +1,168 @@
+@import "../../../dijit/themes/claro/variables";
+
+
+
+.dijitTabPaneWrapper {
+	background:@pane-background-color;
+}
+.dijitTabPaneWrapper,
+.dijitTabContainerTop-tabs {
+	/* todo: add common class name for this div */
+	border-color: @border-color;
+}
+.dijitTabCloseButtonHover {
+	background-position:-14px;
+}
+.dijitTabCloseButtonActive {
+	background-position:-28px;
+}
+.dijitTabInnerDiv {
+	background-color:@unselected-background-color;
+	.transition-property(background-color, border);
+ 	.transition-duration(.35s);
+	color:@unselected-text-color;
+}
+.dijitTabHover .dijitTabInnerDiv {
+	background-color:@hovered-background-color;
+ 	.transition-duration(.25s);
+	color:@hovered-text-color;
+}
+.dijitTabActive .dijitTabInnerDiv {
+	background-color:@pressed-background-color;
+	color:@selected-text-color;
+	.transition-duration(.1s);
+}
+.dijitTabChecked .dijitTabInnerDiv {
+	background-color:@selected-background-color;
+	color:@selected-text-color;
+}
+
+.dijitTabContent {
+	border: 1px solid @border-color;
+}
+.dijitTabHover .dijitTabContent {
+	border-color: @hovered-border-color;
+}
+.dijitTabActive .dijitTabContent {
+	border-color: @pressed-border-color;
+}
+.dijitTabChecked .dijitTabContent {
+	color:@selected-text-color;			// todo: redundant with .dijitTabChecked .dijitTabInnerDiv above?
+	border-color: @border-color;			// don't use @selected-border-color because need to match border of TabContainer
+}
+
+.tabStripButton .dijitTabInnerDiv {
+	background-color: transparent;
+}
+.tabStripButton .dijitTabContent {
+	border: none;
+}
+
+
+/*************** top tab ***************/
+.dijitTabContainerTop-tabs .dijitTab {
+	top: 1px;	/* used for overlap */
+	margin-right: 1px;
+	padding-top: 3px;
+}
+.dj_ie7 .dijitTabContainerTop-tabs .dijitTab {
+	top: 3px;
+}
+/* for top tab padding. change height when status changes */
+.dijitTabContainerTop-tabs .dijitTabContent {
+	padding:3px 6px;
+	border-bottom-width: 0;
+	background-image:url("images/tabTop.png");
+	background-position:0 0;
+	background-repeat:repeat-x;
+	min-width: 60px;
+	text-align: center;
+}
+.dijitTabContainerTop-tabs .dijitTabChecked .dijitTabContent {
+	padding-bottom: 4px;
+	padding-top: 6px;
+}
+
+/* normal status */
+.dijitTabContainerTop-tabs .dijitTabInnerDiv {
+	background-image:url("images/tabTop.png");
+	background-position:0 -248px;
+	background-position:bottom;
+	background-repeat:repeat-x;
+	.box-shadow(0 -1px 1px rgba(0, 0, 0, 0.04));
+}
+
+/* checked status */
+.dijitTabContainerTop-tabs .dijitTabChecked .dijitTabInnerDiv {
+	background-image:none;
+	.box-shadow(0 -1px 2px rgba(0, 0, 0, 0.05));
+}
+.dijitTabContainerTop-tabs .dijitTabChecked .dijitTabContent {
+	background-position:0 -102px;
+	background-repeat:repeat-x;
+}
+/** end top tab **/
+
+/** round corner **/
+.dijitTabContainerTop-tabs .dijitTabInnerDiv,
+.dijitTabContainerTop-tabs .dijitTabContent {
+	.border-radius(2px 2px 0 0);
+}
+.dijitTabContainerBottom-tabs .dijitTabInnerDiv,
+.dijitTabContainerBottom-tabs .dijitTabContent{
+	.border-radius(0 0 2px 2px);
+}
+.dijitTabContainerLeft-tabs .dijitTabInnerDiv,
+.dijitTabContainerLeft-tabs .dijitTabContent{
+	.border-radius(2px 0 0 2px);
+}
+
+.dijitTabContainerRight-tabs .dijitTabInnerDiv,
+.dijitTabContainerRight-tabs .dijitTabContent{
+	.border-radius(0 2px 2px 0);
+}
+
+/************ left/right scroll buttons + menu button ************/
+.tabStripButton {
+	background-color:@button-background-color;
+	border: 1px solid @border-color;
+}
+.dijitTabListContainer-top .tabStripButton {
+	padding: 4px 3px;
+	margin-top:7px;
+	background-image: url("images/tabTop.png");
+	background-position:0 0;
+}
+.dijitTabListContainer-bottom .tabStripButton {
+	padding:5px 3px;
+	margin-bottom:4px;
+	background-image: url("images/tabTop.png");
+	background-position:0 -248px;
+	background-position:bottom;
+}
+.tabStripButtonHover {
+	background-color:@hovered-background-color;
+}
+.tabStripButtonActive {
+	background-color:@pressed-background-color;
+}
+.dijitTabStripIcon {
+	height:15px;
+	width:15px;
+	margin: 0 auto;
+	background:url("../form/images/buttonArrows.png") no-repeat -75px 50%;
+	background-color: transparent;
+}
+.dijitTabStripSlideRightIcon{
+	background-position: -24px 50%;
+}
+.dijitTabStripMenuIcon {
+	background-position: -51px 50%;
+}
+
+.dj_ie6 .dijitTabContent,
+.dj_ie6 .dijitTabInnerDiv,
+.dj_ie6 .dijitTabListContainer-top .tabStripButton,
+.dj_ie6 .dijitTabListContainer-bottom .tabStripButton{
+	background-image: none;
+}
