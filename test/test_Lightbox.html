@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="resources/common.css">
 	<link rel="stylesheet/less" href="../lib/themes/lightbox.less">
 	<style>
+	p a{margin:0 18px 0 0;}
 	</style>
 
 	<script src="resources/less-1.1.3.min.js"></script>
@@ -19,6 +20,33 @@
 <body>
 
 <h1>Nano Lightbox Test</h1>
+
+<h3>Individual Lightboxes</h3>
+<p>
+	<a data-dojo-type="nano.Lightbox" href="resources/images/pic1_large.jpg"><img src="resources/images/pic1_small.jpg"/></a>
+	<a data-dojo-type="nano.Lightbox" href="resources/images/pic2_large.jpg"><img src="resources/images/pic2_small.jpg"/></a>
+	<a data-dojo-type="nano.Lightbox" href="resources/images/pic3_large.jpg"><img src="resources/images/pic3_small.jpg"/></a>
+</p>
+
+<h3>Grouped Lightboxes (declarative)</h3>
+<p id="group2">
+	<a href="resources/images/pic4_large.jpg"><img src="resources/images/pic4_small.jpg"/></a>
+	<a href="resources/images/pic5_large.jpg"><img src="resources/images/pic5_small.jpg"/></a>
+	<a href="resources/images/pic6_large.jpg"><img src="resources/images/pic6_small.jpg"/></a>
+</p>
+<div data-dojo-type="nano.Lightbox" data-dojo-props="query:'#group2 a'"></div>
+
+<h3>Grouped Lightboxes (programatic)</h3>
+<p id="group3">
+	<a href="resources/images/pic7_large.jpg"><img src="resources/images/pic7_small.jpg"/></a>
+	<a href="resources/images/pic8_large.jpg"><img src="resources/images/pic8_small.jpg"/></a>
+	<a href="resources/images/pic9_large.jpg"><img src="resources/images/pic9_small.jpg"/></a>
+</p>
+<script>
+dojo.ready(function(){
+	new nano.Lightbox({query:"#group3 a"});
+});
+</script>
 
 </body>
 </html>
