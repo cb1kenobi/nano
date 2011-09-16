@@ -1,10 +1,10 @@
 (function(){
-	var testResourceRe = /^nano\/tests\//,
+	var testResourceRe = /^nano\/test\//,
 		copyOnly = function(mid){
 			var list = {
 				"nano/nano.profile":1,
 				"nano/package.json":1,
-				"nano/tests":1
+				"nano/test":1
 			};
 			return (mid in list) || /^nano\/resources\//.test(mid);
 		};
@@ -12,7 +12,7 @@
 	return {
 		resourceTags:{
 			test: function(filename, mid){
-				return testResourceRe.test(mid) || mid=="nano/tests";
+				return testResourceRe.test(mid) || mid=="nano/test";
 			},
 
 			copyOnly: function(filename, mid){

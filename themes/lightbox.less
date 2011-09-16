@@ -1,0 +1,86 @@
+.border-radius (@radius) {
+	-moz-border-radius: @radius;
+	border-radius: @radius;
+}
+
+.box-align(@val: center) {
+	-webkit-box-align: @val;
+	-moz-box-align: @val;
+	-o-box-align: @val;
+	box-align: @val;
+}
+
+.box-pack(@val: center) {
+	-webkit-box-pack: @val;
+	-moz-box-pack: @val;
+	-o-box-pack: @val;
+	box-pack: @val;
+}
+
+.display-box() {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -o-box;
+	display: -ms-box;
+	display: box;
+}
+
+.transition(@val: none) {
+	-webkit-transition: @val;
+	-moz-transition: @val;
+	transition: @val;
+}
+
+.transform(@val: none) {
+	-webkit-transform: @val;
+	-moz-transform: @val;
+	-o-transform: @val;
+	transform: @val;
+}
+
+.nanoLightboxImage {
+	border: solid 10px #fff;
+	cursor: pointer;
+	opacity: 1;
+	position: fixed;
+	z-index: 9999999;
+}
+
+.nanoLightboxImageZoom {
+	.transition(~"left 0.5s ease-in-out, top 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out, opacity 0.1s ease-in-out");
+}
+
+.nanoLightboxLoading, .nanoLightboxOverlay {
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.nanoLightboxLoading div {
+	background: #333 url(images/loading.gif) no-repeat center center;
+	.border-radius(5px);
+	border: 2px solid #000;
+	height: 24px;
+	left: 50%;
+	margin: -18px 0 0 -18px;
+	opacity: 0.8;
+	padding: 6px;
+	position: absolute;
+	top: 50%;
+	width: 24px;
+}
+
+.nanoLightboxOverlay {
+	background-color: #000;
+	cursor: pointer;
+	position: fixed;
+	opacity: 0;
+	.transition(opacity 0.5s ease-in-out);
+	z-index: 9999998;
+}
+
+.nanoLightboxOverlayShow {
+	opacity: 0.5;
+}

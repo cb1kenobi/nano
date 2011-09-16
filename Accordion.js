@@ -69,9 +69,7 @@ return decl("nano.Accordion", null, {
 					content: n
 				};
 
-			if (a("data-selected") == "true") {
-				_t._selectedIdx = i;
-			}
+			a("data-selected") == "true" && (_t._selectedIdx = i);
 
 			dom.place(n, p.wrapper);
 			style.set(n, "display", "block");
@@ -82,17 +80,13 @@ return decl("nano.Accordion", null, {
 		// set the active pane
 		arr.forEach(_t._panes, function(p, i){
 			_t._select(p);
-			if(i != _t._selectedIdx){
-				style.set(p.wrapper, {
-					display: "none",
-					height: 0
-				});
-			}
+			i != _t._selectedIdx && style.set(p.wrapper, {
+				display: "none",
+				height: 0
+			});
 		});
 
-		if(params.onload){
-			params.onload.apply(_t);
-		}
+		params.onload && params.onload.apply(_t);
 	},
 
 	_show: function(i, c, n, k){
@@ -106,10 +100,7 @@ return decl("nano.Accordion", null, {
 					style.set(nw, "height", ch + "px");
 				};
 
-			if(this._anim){
-				this._anim.stop();
-			}
-
+			this._anim && this._anim.stop();
 			this._selectedIdx = i;
 			this._select(c, k);
 			this._select(n, k);
@@ -146,9 +137,7 @@ return decl("nano.Accordion", null, {
 		var a = (p.idx == this._selectedIdx);
 		attr.set(p.title, "tabIndex", a ? 0 : -1);
 		css[a ? "add" : "remove"](p.container, cls + "Selected");
-		if(k){
-			p.title[a ? "focus" : "blur"]();
-		}
+		k && p.title[a ? "focus" : "blur"]();
 	}
 
 });

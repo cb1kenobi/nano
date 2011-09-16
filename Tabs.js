@@ -74,9 +74,7 @@ return decl("nano.Tabs", null, {
 			css.add(n, cls + "Pane");
 			wrapper.appendChild(n);
 
-			if (a("data-selected") == "true") {
-				_t._selectedIdx = i;
-			}
+			a("data-selected") == "true" && (_t._selectedIdx = i);
 
 			p.tab = t;
 			_t._panes.push(p);
@@ -88,9 +86,7 @@ return decl("nano.Tabs", null, {
 		// set the active pane
 		arr.forEach(_t._panes, lang.hitch(_t, "_select"));
 
-		if(params.onload){
-			params.onload.apply(_t);
-		}
+		params.onload && params.onload.apply(_t);
 	},
 
 	_show: function(i, c, n, k){
@@ -106,9 +102,7 @@ return decl("nano.Tabs", null, {
 		attr.set(p.title, "tabIndex", a ? 0 : -1);
 		css[a ? "add" : "remove"](p.tab, cls + "Selected");
 		style.set(p.node, "display", a ? "" : "none");
-		if(k){
-			p.title[a ? "focus" : "blur"]();
-		}
+		k && p.title[a ? "focus" : "blur"]();
 	}
 
 });

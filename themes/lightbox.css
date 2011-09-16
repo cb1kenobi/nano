@@ -1,0 +1,46 @@
+.nanoLightboxImage {
+  border: solid 10px #fff;
+  cursor: pointer;
+  opacity: 1;
+  position: fixed;
+  z-index: 9999999;
+}
+.nanoLightboxImageZoom {
+  -webkit-transition: left 0.5s ease-in-out, top 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out, opacity 0.1s ease-in-out;
+  -moz-transition: left 0.5s ease-in-out, top 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out, opacity 0.1s ease-in-out;
+  transition: left 0.5s ease-in-out, top 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out, opacity 0.1s ease-in-out;
+}
+.nanoLightboxLoading, .nanoLightboxOverlay {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.nanoLightboxLoading div {
+  background: #333333 url(images/loading.gif) no-repeat center center;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: 2px solid #000;
+  height: 24px;
+  left: 50%;
+  margin: -18px 0 0 -18px;
+  opacity: 0.8;
+  padding: 6px;
+  position: absolute;
+  top: 50%;
+  width: 24px;
+}
+.nanoLightboxOverlay {
+  background-color: #000;
+  cursor: pointer;
+  position: fixed;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 9999998;
+}
+.nanoLightboxOverlayShow {
+  opacity: 0.5;
+}
