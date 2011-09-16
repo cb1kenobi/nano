@@ -111,7 +111,7 @@ return decl("nano.Lightbox", null, {
 						},
 						onerror: h
 					}, win.body()),
-console.debug(attr.get(t, "href"));
+
 					i.src = attr.get(t, "href");
 				}
 			}

@@ -37,7 +37,7 @@
 	"homepage": "https://github.com/cb1kenobi/nano",
 	"directories": {
 		"lib": ".",
-		"test": "./test"
+		"test": "./tests"
 	},
 	"main": "main",
 	"dojoBuild": "nano.profile.js"
