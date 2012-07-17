@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Nano Rotator Test</title>
+
+	<link rel="stylesheet" href="resources/common.css">
+	<link rel="stylesheet" href="../themes/rotator.css">
+	<style>
+	p a{margin:0 18px 0 0;}
+	
+	</style>
+
+	<script src="../../dojo/dojo.js" data-dojo-config="parseOnLoad:true,packages:[{'name':'nano','location':'../nano'}]"></script>
+	<!-- <script src="/js-build/dojo/dojo.js" data-dojo-config="parseOnLoad:true,async:true,packages:[{'name':'nano','location':'../nano'}]"></script> -->
+	<script>
+	require([
+		"dojo/parser"
+		,"nano/Rotator"
+		,"nano/AutoRotator"
+		,"nano/rotator/Controller"
+		,"nano/rotator/Fade"
+		,"nano/rotator/Pan"
+		,"nano/rotator/PanFade"
+		,"nano/rotator/Slide"
+		,"nano/rotator/Wipe"
+		,"dojo/domReady!"
+	], function(){
+	
+	});
+	</script>
+</head>
+<body>
+
+<h1>Nano Rotator Test</h1>
+<h3>Auto Rotator With a Controller</h3>
+<div class="slider">
+<div class="rotator" dojoType="nano.AutoRotator" jsId="myRotator"
+ transition="nano.rotator.crossFade" duration="3000">
+  <div class="pane">
+  	<h4 class="description">A great picture 1</h4>
+	<img src="resources/images/pic1_large.jpg"/>
+  </div>
+  <div class="pane">
+  	<h4 class="description">A great picture 2</h4>
+	<img src="resources/images/pic2_large.jpg"/>
+  </div>
+  <div class="pane">
+  	<h4 class="description">A great picture 3</h4>
+	<img src="resources/images/pic3_large.jpg"/>
+  </div>
+  <div class="pane">
+  	<h4 class="description">A great picture 4</h4>
+	<img src="resources/images/pic4_large.jpg"/>
+  </div>
+  <div class="pane">
+  	<h4 class="description">A great picture 5</h4>
+	<img src="resources/images/pic5_large.jpg"/>
+  </div>
+</div>
+<div dojoType="nano.rotator.Controller" class="controller dots" rotator="myRotator" commands="#"></div>
+</body>
+</html>
