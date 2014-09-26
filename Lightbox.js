@@ -188,7 +188,7 @@ return decl("nano.Lightbox", null, {
  tests['video'] = function() {
         var elem = document.createElement('video'),
             bool = false;
-            
+
         // IE9 Running on Windows Server SKU can cause an exception to be thrown, bug #224
         try {
             if ( bool = !!elem.canPlayType ) {
@@ -202,9 +202,9 @@ return decl("nano.Lightbox", null, {
 
                 bool.webm = elem.canPlayType('video/webm; codecs="vp8, vorbis"');
             }
-            
+
         } catch(e) { }
-        
+
         return bool;
     };
     */
