@@ -1,0 +1,56 @@
+.rotator {
+	position: relative;
+	height: 375px;
+	width: 500px;
+	border: 20px solid #fff;
+	overflow: hidden;
+}
+.rotator .description {
+	position: absolute;
+	bottom: 3px;
+	width: 480px;
+	height: 20px;
+	background: rgba(0,0,0,0.4);
+	margin: 0;
+	padding: 5px 10px;
+	font-size: 12px;
+	font-family: arial;
+	line-height: 20px;
+	color:#fff;
+}
+.rotator img {
+	width: 500px;
+}
+.controller {
+	z-index: 100;
+	width: 510px;
+	margin-top: -40px;
+	position: relative;
+}
+.dots ul{
+	margin:0;
+	padding:0;
+	float:right;
+}
+
+.dots li{
+	float:left;
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+
+.dots a span{
+	display:none;
+}
+
+.dots .dojoxRotatorNumber a{
+	display:block;
+	width:10px;
+	height:10px;
+	background:url(../tests/resources/images/rotator_dots.png) no-repeat 0 0;
+}
+
+.dots .dojoxRotatorSelected a{
+	background:url(../tests/resources/images/rotator_dots.png) no-repeat 0 -10px;
+}
